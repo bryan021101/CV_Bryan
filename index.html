@@ -655,10 +655,6 @@
             animation: shimmer 2s infinite;
         }
 
-        @keyframes fillProgress {
-            to { width: 85%; }
-        }
-
         @keyframes shimmer {
             0% { left: -100%; }
             100% { left: 100%; }
@@ -868,6 +864,72 @@
                             </div>
                         </div>
                     </div>
+
+
+
+    <!-- Habilidades -->
+                    <div class="section">
+                        <h2 class="section-title">🎯 Habilidades Tecnicas y Herramientas</h2>
+                        <div class="skills-grid">
+                            <div class="skill-item tooltip" data-tooltip="Nivel:  Basico">
+                                <strong>Redes</strong>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" data-progress="30"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item tooltip" data-tooltip="Nivel:  bueno">
+                                <strong>Servidores</strong>
+                                <div class="progress-bar">
+                                    <div class="progress-fill"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item tooltip" data-tooltip="Level: Experto">
+                                <strong>Seguridad Informatica</strong>
+                                <div class="progress-bar">
+                                    <div class="progress-fill"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item tooltip" data-tooltip="Nivel: Muy bueno">
+                                <strong>Azure</strong>
+                                <div class="progress-bar">
+                                    <div class="progress-fill"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item tooltip" data-tooltip="Nivel: Avanzado">
+                                <strong>ESXI</strong>
+                                <div class="progress-bar">
+                                    <div class="progress-fill"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item tooltip" data-tooltip="Nivel: Excepcional">
+                                <strong>Isabel-Asterisk</strong>
+                                <div class="progress-bar">
+                                    <div class="progress-fill"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item tooltip" data-tooltip="Nivel: Excepcional">
+                                <strong>Zabbix</strong>
+                                <div class="progress-bar">
+                                    <div class="progress-fill"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item tooltip" data-tooltip="Nivel: Excepcional">
+                                <strong>Wazuh</strong>
+                                <div class="progress-bar">
+                                    <div class="progress-fill"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item tooltip" data-tooltip="Nivel: Excepcional">
+                                <strong>Linux</strong>
+                                <div class="progress-bar">
+                                    <div class="progress-fill"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>           
+                         
+
+
 
                     <!-- Referencias -->
                     <div class="section">
@@ -1214,8 +1276,16 @@
             const progressBars = document.querySelectorAll('.progress-fill');
             progressBars.forEach((bar, index) => {
                 setTimeout(() => {
-                    const skills = ['Liderazgo', 'Comunicación', 'Trabajo en equipo', 'Resolución de problemas', 'Elaboración de reportes', 'Responsabilidad'];
-                    const skillLevels = [88, 92, 95, 87, 90, 96]; // Niveles específicos para cada habilidad
+                    const skills = [
+         'Liderazgo', 'Comunicación', 'Trabajo en equipo', 'Resolución de problemas', 'Elaboración de reportes', 'Responsabilidad',
+        'Redes', 'Servidores', 'Seguridad', 'Azure', 'ESXi', 'Issabel / Asterisk', 'Zabbix', 'Wazuh','Linux'
+      
+    ];
+              const skillLevels = [
+         88, 92, 95, 87, 90, 96,          // blandas
+        30, 40, 40, 40, 40, 50, 80, 50,40// técnicas
+       
+    ];
                     bar.style.width = skillLevels[index] + '%';
                 }, index * 300);
             });
